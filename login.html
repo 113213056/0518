@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登入 - 🏀 NBA 分享交流平台</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand" onclick="go('index')">
+    <span style="font-size:26px">🏀</span>
+    <span>NBA 交流平台</span>
+  </div>
+  <div class="navbar-nav" id="navArea"></div>
+</nav>
+
+<div class="page auth-wrap" style="display:flex;">
+  <div class="auth-box">
+    <h2>🏀 歡迎回來</h2>
+    <p class="sub">登入你的 NBA 交流帳號</p>
+    <div class="fg">
+      <label>帳號 ID</label>
+      <input type="text" id="liId" placeholder="輸入你的 ID">
+    </div>
+    <div class="fg">
+      <label>密碼</label>
+      <input type="password" id="liPw" placeholder="輸入密碼">
+    </div>
+    <button class="btn btn-p" onclick="doLogin()" style="margin-top:6px">🔓 登入</button>
+    <p class="switch">還沒有帳號？<a onclick="go('register')">立即註冊</a></p>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div class="mi">🔒</div>
+    <h3>是否有平台帳號？</h3>
+    <p>登入後即可按讚、留言，和大家一起互動！</p>
+    <div class="modal-btns">
+      <button class="btn btn-p" style="width:auto;padding:10px 24px" onclick="closeModal();go('login')">前往登入</button>
+      <button class="btn btn-o" onclick="closeModal();go('register')">註冊帳號</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

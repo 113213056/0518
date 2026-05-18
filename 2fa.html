@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雙重認證 - 🏀 NBA 分享交流平台</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand" onclick="go('index')">
+    <span style="font-size:26px">🏀</span>
+    <span>NBA 交流平台</span>
+  </div>
+  <div class="navbar-nav" id="navArea"></div>
+</nav>
+
+<div class="page auth-wrap" style="display:flex;">
+  <div class="auth-box">
+    <h2>🔒 雙重認證</h2>
+    <p class="sub">請輸入您收到的 6 位數驗證碼</p>
+    <div class="fg">
+      <label>驗證碼</label>
+      <input type="text" id="faCode" placeholder="輸入 6 位數驗證碼" maxlength="6" style="text-align:center;letter-spacing:4px;font-size:20px;font-weight:bold;">
+    </div>
+    <button class="btn btn-p" onclick="verify2FA()" style="margin-top:6px">✅ 驗證並登入</button>
+    <button class="btn btn-o" onclick="go('login')" style="width:100%;margin-top:8px">返回登入</button>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div class="mi">🔒</div>
+    <h3>是否有平台帳號？</h3>
+    <p>登入後即可按讚、留言，和大家一起互動！</p>
+    <div class="modal-btns">
+      <button class="btn btn-p" style="width:auto;padding:10px 24px" onclick="closeModal();go('login')">前往登入</button>
+      <button class="btn btn-o" onclick="closeModal();go('register')">註冊帳號</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

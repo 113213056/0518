@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏀 NBA 分享交流平台</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 導覽列 -->
+<nav class="navbar">
+  <div class="navbar-brand" onclick="go('index')">
+    <span style="font-size:26px">🏀</span>
+    <span>NBA 交流平台</span>
+  </div>
+  <div class="navbar-nav" id="navArea"></div>
+</nav>
+
+<!-- ===== 分享區 ===== -->
+<div class="page" style="display:block;">
+  <div class="wrap">
+    <div id="feedList"></div>
+  </div>
+</div>
+
+<!-- ===== Modal ===== -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div class="mi">🔒</div>
+    <h3>是否有平台帳號？</h3>
+    <p>登入後即可按讚、留言，和大家一起互動！</p>
+    <div class="modal-btns">
+      <button class="btn btn-p" style="width:auto;padding:10px 24px" onclick="closeModal();go('login')">前往登入</button>
+      <button class="btn btn-o" onclick="closeModal();go('register')">註冊帳號</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
